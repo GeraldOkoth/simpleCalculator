@@ -166,20 +166,20 @@ double basicOperations()
         switch(operator1)
         {
             case '+':
-                cout <<firstNum <<" + " <<secondNum <<" = " <<result <<endl;
                 result = firstNum + secondNum;
+                cout <<firstNum <<" + " <<secondNum <<" = " <<result <<endl;
                 break;
             case '-':
-                cout <<firstNum <<" - " <<secondNum <<" = " <<result <<endl;
                 result = firstNum - secondNum;
+                cout <<firstNum <<" - " <<secondNum <<" = " <<result <<endl;
                 break;
             case '*':
-                cout <<firstNum <<" * " <<secondNum <<" = " <<result <<endl;
                 result = firstNum * secondNum;
+                cout <<firstNum <<" * " <<secondNum <<" = " <<result <<endl;
                 break;
             case '/':
-                cout <<firstNum <<" / " <<secondNum <<" = " <<result <<endl;
                 result = firstNum / secondNum;
+                cout <<firstNum <<" / " <<secondNum <<" = " <<result <<endl;
                 break;
             default:
                 cout <<"Invalid input!";
