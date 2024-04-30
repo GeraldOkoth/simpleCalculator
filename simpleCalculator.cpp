@@ -187,5 +187,3 @@ double basicOperations()
     }
     return result;
 }
-
-
