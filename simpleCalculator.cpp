@@ -20,6 +20,7 @@ double averageOfNums(double firstNumber, double secondNumber);
 double sumOfEvenNums();
 double sumOfOddNums();
 double basicOperations();
+double sqrtNum();
 
 
 int main()
@@ -37,7 +38,7 @@ int main()
 
     cout << "---options---" <<endl;
     cout << "1. Area of a Circle" <<endl << "2. Area of a Triangle" <<endl << "3. Area of a Rectangle" <<endl << "4. Average" <<endl
-         << "5. Sum of Even numbers" <<endl << "6. Sum of Odd numbers" <<endl << "7. Basic operations" <<endl <<endl;
+         << "5. Sum of Even numbers" <<endl << "6. Sum of Odd numbers" <<endl << "7. Basic operations" <<endl << "8. Square root"<<endl <<endl;
 
     cin >> selectOption; //Store user's input.
     switch(selectOption)
@@ -81,15 +82,19 @@ int main()
             break;
         case 5:
             cout << "You have selected option 5." <<endl;
-            cout << "Sum of even numbers between 1 and 100 is: " << sumOfEvenNums() <<endl;
+            sumOfEvenNums();
             break;
         case 6:
             cout << "You have selected option 6." <<endl;
-            cout << "Sum of odd numbers between 1 and 100 is: " << sumOfOddNums() <<endl;
+            sumOfOddNums();
             break;
         case 7:
             cout << "You have selected option 7." <<endl;
             basicOperations();
+            break;
+        case 8:
+            cout << "You have selected option 8." <<endl;
+            sqrtNum();
             break;
         default:
             cout << "invalid option! Please try again." <<endl;
@@ -121,27 +126,36 @@ double averageOfNums(double firstNumber, double secondNumber)
 //Function to compute the sum of even numbers
 double sumOfEvenNums()
 {
+    int highEven;
+    cout << "Please enter largest even number: ";
+    cin >> highEven;
     int sum = 0;
-    for(num = 2; num < 100; num++)
+    for(num = 2; num <= highEven; num++)
     {
         if(num%2 == 0)
         {
             sum += num;
         }
     }
+    cout << "\nSum of even numbers between 1 and " << highEven << " is: " << sum <<endl;
     return sum;
 }
 //Function to compute the sum of odd numbers
 double sumOfOddNums()
 {
+    int highOdd;
+    cout << "Please enter largest odd number: ";
+    cin >> highOdd;
     int sum = 0;
-    for(num = 1; num < 100; num++)
+    for(num = 1; num <= highOdd; num++)
     {
         if(num%2 != 0)
         {
             sum += num;
         }
     }
+    cout << "\nSum of odd numbers between 1 and " << highOdd << " is: " << sum <<endl;
+
     return sum;
 }
 //Function to perform basic operations
@@ -186,4 +200,18 @@ double basicOperations()
         }
     }
     return result;
+}
+//Function to compute square root of a number
+double sqrtNum()
+{
+    int squareRootNum;
+
+    cout << "Please enter a number: ";
+    cin >> squareRootNum;
+
+    float x = sqrt(squareRootNum);
+
+    cout << "\nThe square root of " << squareRootNum << " is: " << x <<endl;
+
+    return x;
 }
