@@ -1,6 +1,6 @@
 //Simple calculator
 #include <iostream>
-#include <math.h>
+#include <cmath>
 
 using namespace std;
 /**
@@ -21,6 +21,7 @@ double sumOfEvenNums();
 double sumOfOddNums();
 double basicOperations();
 double sqrtNum();
+double cbrtNum();
 
 
 int main()
@@ -38,7 +39,7 @@ int main()
 
     cout << "---options---" <<endl;
     cout << "1. Area of a Circle" <<endl << "2. Area of a Triangle" <<endl << "3. Area of a Rectangle" <<endl << "4. Average" <<endl
-         << "5. Sum of Even numbers" <<endl << "6. Sum of Odd numbers" <<endl << "7. Basic operations" <<endl << "8. Square root"<<endl <<endl;
+         << "5. Sum of Even numbers" <<endl << "6. Sum of Odd numbers" <<endl << "7. Basic operations" <<endl << "8. Square root" <<endl << "9. Cube root"<<endl <<endl;
 
     cin >> selectOption; //Store user's input.
     switch(selectOption)
@@ -95,6 +96,10 @@ int main()
         case 8:
             cout << "You have selected option 8." <<endl;
             sqrtNum();
+            break;
+        case 9:
+            cout << "You have selected option 9." <<endl;
+            cbrtNum();
             break;
         default:
             cout << "invalid option! Please try again." <<endl;
@@ -212,6 +217,20 @@ double sqrtNum()
     float x = sqrt(squareRootNum);
 
     cout << "\nThe square root of " << squareRootNum << " is: " << x <<endl;
+
+    return x;
+}
+//Function to compute cube root of a number
+double cbrtNum()
+{
+    int cbRootNum;
+
+    cout << "Please enter a number: ";
+    cin >> cbRootNum;
+
+    float x = cbrt(cbRootNum);
+
+    cout << "\nThe cube root of " << cbRootNum << " is: " << x <<endl;
 
     return x;
 }
