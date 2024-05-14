@@ -1,3 +1,3 @@
-
-## This repository contains files to implement a _simple calculator_
+## Simple Calculator
+An implementation of a basic _simple calculator_
    ***
